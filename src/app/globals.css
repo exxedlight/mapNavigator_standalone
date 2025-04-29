@@ -1,0 +1,104 @@
+@import 'leaflet/dist/leaflet.css';
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  transition: .3s;
+
+  &::-webkit-scrollbar{
+    width: 5px;
+    background-color: black;
+  }
+
+  &::-webkit-scrollbar-thumb{
+    width: 5px;
+    background-color: silver;
+    border-radius: 10px;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
+
+
+
+.wrapper{
+  h1{
+    padding-left: 30px;
+    font-size: 30px;
+  }
+  #error-p{
+    padding-left: 30px;
+    font-size: 16px;
+  }
+}
+
+.way-info{
+  z-index: 2;
+  position: absolute;
+  bottom: 60px;
+  right: 40px;
+  border: 2px solid silver;
+  background-color: rgba(43, 43, 43, .8);
+  border-radius: 30px;
+  padding: 20px;
+  width: 20%;
+  min-width: 200px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  label{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+@media (width <= 1000px) {
+  .way-info{
+    right: 10px;
+    font-size: .7em;
+  }
+}

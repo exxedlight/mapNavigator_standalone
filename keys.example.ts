@@ -1,0 +1,1 @@
+export const tomTomApiKey = process.env.NEXT_PUBLIC_TOMTOM_API_KEY;
