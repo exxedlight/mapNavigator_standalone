@@ -6,7 +6,6 @@ import 'leaflet/dist/leaflet.css';
 import "leaflet.vectorgrid";
 import MapComponentProps from '@/interfaces/MapComponentProps';
 import Coordinates from '@/interfaces/Coordinates';
-import { tomTomApiKey } from '../../../keys';
 import { carIcon, checkIcon, customIcon, endIcon } from './icons';
 import "./style.css";
 
@@ -19,6 +18,7 @@ const MapComponent = (
       ============  VARIABLES  ===============
       ========================================
   */
+  const tomTomApiKey = process.env.NEXT_PUBLIC_TOMTOM_API_KEY!;
 
   const defaultCenter: Coordinates = { lat: 50.27, lng: 30.31 };
   const mapRef = useRef<L.Map | null>(null);
